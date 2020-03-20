@@ -10,8 +10,6 @@
    	loginDB logindb = loginDB.getInstace();
    	
    	String input_ID, input_Password, result;
-   	
-   	
    	String login_data = request.getParameter("login_data");
    	
    	try{
@@ -28,7 +26,8 @@
    
    		System.out.println(input_ID);
    		System.out.println(input_Password);
-   		
+           
+        // result return user name
    		result = logindb.loginDB(input_ID, input_Password);
    		out.print(result);
    		
