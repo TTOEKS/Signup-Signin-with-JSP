@@ -9,7 +9,7 @@ import org.json.simple.JSONObject;
 
 public class loginDB {
 	
-	// using singleTone pattern
+	// using singleton pattern
 	private static loginDB instace = new loginDB();
 	
 	public static loginDB getInstace() {
