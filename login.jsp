@@ -5,6 +5,7 @@
     pageEncoding="UTF-8"%>
 
 <%
+    // using signton pattern
    	request.setCharacterEncoding("UTF-8");
    	loginDB logindb = loginDB.getInstace();
    	
