@@ -8,14 +8,12 @@
 
 
 <%
-	
+
 	request.setCharacterEncoding("UTF-8");
 	signupDB signupdb = signupDB.getInstance();
-
 	
 	String signup_data			= request.getParameter("signup_data");
-	
-	
+		
 	try{
 	// Convert JSONObject to String 
 	JSONParser parser = new JSONParser();
@@ -24,12 +22,11 @@
 
 	
 	System.out.println(signup_data);
-	
-	
-	
+		
+	// get user info in JSON
 	String user_name			= jsonObject.get("name").toString();
 	String user_id				= jsonObject.get("id").toString();
-	String user_password		= jsonObject.get("password").toString();
+	String user_password			= jsonObject.get("password").toString();
 	String user_email			= jsonObject.get("email").toString();
 
 	System.out.println(user_name);
