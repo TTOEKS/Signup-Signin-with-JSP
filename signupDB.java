@@ -11,6 +11,7 @@ public class signupDB {
 		return instance;
 	}
 	
+	// using MariaDB
 	static String jdbcurl 		= "jdbc:mariadb://127.0.0.1:3306/news_collector";
 	static String dbId	 	= "DB_id";
 	static String dbPw		= "DB_password";
@@ -51,7 +52,7 @@ public class signupDB {
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
-		
+		// return string type "true" or "false" 
 		return returns;
 	
 	}
