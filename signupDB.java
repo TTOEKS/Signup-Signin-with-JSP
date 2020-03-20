@@ -3,27 +3,29 @@ import java.sql.*;
 import org.json.simple.JSONObject;;
 
 public class signupDB {
-	
+
+	// using singleton pattern
 	private static signupDB instance = new signupDB();
-	
+
 	public static signupDB getInstance() {
 		return instance;
 	}
 	
-	static String jdbcurl 	= "jdbc:mariadb://127.0.0.1:3306/news_collector";
+	static String jdbcurl 		= "jdbc:mariadb://127.0.0.1:3306/news_collector";
 	static String dbId	 	= "DB_id";
 	static String dbPw		= "DB_password";
 	
 	
 	public String signupDB(String name, String id, String password, String email) {
 		Connection			conn		= null;
-		PreparedStatement	pstmt		= null;
-		ResultSet			rs			= null;
+		PreparedStatement		pstmt		= null;
+		ResultSet			rs		= null;
 		String 				query 		= "";
 		String 				returns 	= "";
 		int 				num_update	= 0;
 		
 		
+		// input name, id, password, e-mail
 		try {
 			Class.forName("org.mariadb.jdbc.Driver");
 			
