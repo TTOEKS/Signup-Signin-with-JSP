@@ -16,14 +16,15 @@ public class loginDB {
 		return instace;
 	}
 	
+	// using MariaDB
 	static String jdbcurl 	= "jdbc:mariadb://127.0.0.1:3306/news_collector";
 	static String dbId		= "DB_ID"; // you DB Id
 	static String dbPw		= "DB_Password";
 	
 	public String loginDB(String insertID, String insertPassword) {
 		Connection 			conn  		= null;
-		PreparedStatement	pstmt 		= null;
-		ResultSet			rs	  		= null;
+		PreparedStatement		pstmt 		= null;
+		ResultSet			rs	  	= null;
 		String				query 		= "";
 		String 				name		= "";
 	
